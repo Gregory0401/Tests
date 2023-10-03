@@ -78,21 +78,7 @@ html {
 :focus {
   scale: 1.2;
 }
-/* .button_wrong {
-  background: #eb6465;
-}
-.button_wrong::before {
-  content: "😡";
-} */
-/* .button_correct {
-  background: #5eb97d;
-}
-.button_correct::before {
-  content: "😊";
-} */
-/* .button_passive {
-  background: #b3b3b3;
-} */
+
 .button_correct::before {
   content: "✔️";
 }
