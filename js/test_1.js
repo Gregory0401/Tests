@@ -105,7 +105,6 @@ class Result {
   }
 }
 
-//Массив с результатами
 const results = [
   new Result("Ваша аура - Голубая", 6),
   new Result("Ваша аура - Красная", 24),
@@ -113,7 +112,6 @@ const results = [
   new Result("Ваша аура - Фиолетовая", 18),
 ];
 
-//Массив с вопросами
 const questions = [
   new Question(
     "Какое место заставляет вас чувствовать себя спокойно и расслабленно? ",
@@ -164,22 +162,16 @@ const questions = [
   ]),
 ];
 
-//Сам тест
 const quiz = new Quiz(1, questions, results);
 
 Update();
 
-//Обновление теста
 function Update() {
-  //Проверяем, есть ли ещё вопросы
   if (quiz.current < quiz.questions.length) {
-    //Если есть, меняем вопрос в заголовке
     headElem.innerHTML = quiz.questions[quiz.current].text;
 
-    //Удаляем старые варианты ответов
     buttonsElem.innerHTML = "";
 
-    //Создаём кнопки для новых вариантов ответов
     for (let i = 0; i < quiz.questions[quiz.current].answers.length; i++) {
       let btn = document.createElement("button");
       btn.className = "button";
@@ -191,13 +183,10 @@ function Update() {
       buttonsElem.appendChild(btn);
     }
 
-    //Выводим номер текущего вопроса
     pagesElem.innerHTML = quiz.current + 1 + " / " + quiz.questions.length;
 
-    //Вызываем функцию, которая прикрепит события к новым кнопкам
     Init();
   } else {
-    //Если это конец, то выводим результат
     buttonsElem.innerHTML = "";
     headElem.innerHTML = quiz.results[quiz.result].text;
     pagesElem.innerHTML = "Очки: " + quiz.score;
@@ -205,12 +194,9 @@ function Update() {
 }
 
 function Init() {
-  //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
   for (let i = 0; i < btns.length; i++) {
-    //Прикрепляем событие для каждой отдельной кнопки
-    //При нажатии на кнопку будет вызываться функция Click()
     btns[i].addEventListener("click", function (e) {
       Click(e.target.getAttribute("index"));
     });
@@ -218,18 +204,14 @@ function Init() {
 }
 
 function Click(index) {
-  //Получаем номер правильного ответа
   let correct = quiz.Click(index);
 
-  //Находим все кнопки
   let btns = document.getElementsByClassName("button");
 
-  //Делаем кнопки серыми
   for (let i = 0; i < btns.length; i++) {
     btns[i].className = "button button_passive";
   }
 
-  //Если это тест с правильными ответами, то мы подсвечиваем правильный ответ зелёным, а неправильный - красным
   if (quiz.type == 1) {
     if (correct >= 0) {
       btns[correct].className = "button button_correct";
@@ -239,10 +221,8 @@ function Click(index) {
       btns[index].className = "button button_wrong";
     }
   } else {
-    //Иначе просто подсвечиваем зелёным ответ пользователя
     btns[index].className = "button button_correct";
   }
 
-  //Ждём секунду и обновляем тест
   setTimeout(Update, 1000);
 }
