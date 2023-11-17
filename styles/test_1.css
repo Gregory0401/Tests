@@ -17,3 +17,10 @@
   width: 340px;
   margin: 0 auto;
 }
+.test1_h2 {
+  text-align: center;
+  font-size: 30px;
+  color: #fdfdfd;
+  margin-bottom: 20px;
+  text-shadow: 5px 5px 4px #5d5e5f;
+}
