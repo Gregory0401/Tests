@@ -1,12 +1,13 @@
-.back {
-  color: #070707;
-  text-align: left;
-  font-size: 22px;
-}
 .main_back {
   margin-bottom: 40px;
 }
-
+.quiz-frame {
+  width: 340px;
+  height: 600px;
+  background-color: #fad065;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px rgb(57, 56, 56);
+}
 .test1_container {
   width: 340px;
   margin: 0 auto;
