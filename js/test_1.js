@@ -1,7 +1,3 @@
-const headElem = document.getElementById("head");
-const buttonsElem = document.getElementById("buttons");
-const pagesElem = document.getElementById("pages");
-
 //Класс, который представляет сам тест
 class Quiz {
   constructor(type, questions, results) {
