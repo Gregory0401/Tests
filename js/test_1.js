@@ -59,13 +59,6 @@ class Quiz {
   }
 
   //Если вопросы кончились, этот метод проверит, какой результат получил пользователь
-  End() {
-    for (let i = 0; i < this.results.length; i++) {
-      if (this.results[i].Check(this.score)) {
-        this.result = i;
-      }
-    }
-  }
 }
 
 //Класс, представляющий вопрос
