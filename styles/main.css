@@ -6,6 +6,7 @@ body {
   height: 100px;
   padding: 30px 30px 10px 30px;
   border-bottom: 2px solid #fdfdfd;
+  margin-bottom: 20px;
 }
 .header_h1 {
   font-size: 44px;
@@ -25,16 +26,39 @@ body {
   width: 280px;
   height: 400px;
   border-radius: 10px;
-  background-color: #fdfdfd;
+  background-color: #fed267;
   padding: 20px;
-  text-shadow: 5px 5px 4px rgb(57, 56, 56, 0.6);
   box-shadow: 15px 15px 15px rgb(57, 56, 56);
 }
 .main_item:hover {
-  scale: 1.06;
+  scale: 1.03;
+  box-shadow: 15px 15px 15px rgb(251, 251, 251);
 }
 .main_h2 {
-  color: #070707;
+  color: #e51a1a;
+}
+.header_h2:hover {
+  color: #e51a1a;
+  animation-name: h2-start;
+  animation-duration: 1000ms;
+  animation-iteration-count: infinite;
+}
+@keyframes h2-start {
+  0% {
+    color: #fed267;
+  }
+  25% {
+    color: #e51a1a;
+  }
+  50% {
+    color: #fed267;
+  }
+  75% {
+    color: #e51a1a;
+  }
+  100% {
+    color: #fed267;
+  }
 }
 
 @media Screen and (min-width: 375px) {
@@ -47,6 +71,9 @@ body {
   }
   .link {
     font-size: 24px;
+  }
+  .main_h2 {
+    margin-top: 30px;
   }
 }
 @media Screen and (min-width: 768px) {

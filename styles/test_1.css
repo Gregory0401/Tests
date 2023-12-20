@@ -1,3 +1,6 @@
+.container-wrapper {
+  padding: 0 30px 40px 30px;
+}
 .back {
   color: #070707;
   text-align: left;
@@ -5,7 +8,15 @@
 }
 .main_back {
   margin-bottom: 40px;
+  color: #fdfdfd;
 }
+.main_back:hover {
+  color: #e51a1a;
+}
+.main_back:hover .main_span {
+  scale: 1.03;
+}
+
 .quiz-frame {
   width: 340px;
   height: 600px;
