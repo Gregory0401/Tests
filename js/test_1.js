@@ -202,27 +202,3 @@ function Init() {
     });
   }
 }
-
-function Click(index) {
-  let correct = quiz.Click(index);
-
-  let btns = document.getElementsByClassName("button");
-
-  for (let i = 0; i < btns.length; i++) {
-    btns[i].className = "button button_passive";
-  }
-
-  if (quiz.type == 1) {
-    if (correct >= 0) {
-      btns[correct].className = "button button_correct";
-    }
-
-    if (index != correct) {
-      btns[index].className = "button button_wrong";
-    }
-  } else {
-    btns[index].className = "button button_correct";
-  }
-
-  setTimeout(Update, 1000);
-}
