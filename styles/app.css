@@ -29,6 +29,11 @@ html {
   text-align: center;
 }
 
+.quiz-frame {
+  border: 0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
 .quiz__head {
   font-size: 20pt;
   margin: 10px;
