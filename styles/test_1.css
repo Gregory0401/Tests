@@ -1,6 +1,6 @@
 @font-face {
   font-family: "Caveat-Bold";
-  src: url("/font/Caveat-Bold.ttf");
+  src: url("https://gregory0401.github.io/Tests/tests/font/Caveat-Bold.ttf");
 }
 .container-wrapper {
   padding: 0 30px 40px 30px;
