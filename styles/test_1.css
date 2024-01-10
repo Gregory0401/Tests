@@ -40,3 +40,10 @@
   text-shadow: 5px 5px 4px #5d5e5f;
   font-family: "Caveat-Bold";
 }
+.daddy {
+  width: 340px;
+  height: 600px;
+  background-color: #fad065;
+  border-radius: 20px;
+  box-shadow: 15px 15px 15px rgb(57, 56, 56);
+}
