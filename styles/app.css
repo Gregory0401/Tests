@@ -61,6 +61,7 @@ html {
 
 .footer__content {
   padding: 5px;
+  color: #e51a1a;
 }
 
 .button {
@@ -72,7 +73,6 @@ html {
   width: 70%;
   font-size: 30px;
   font-family: "Caveat-Bold";
-
   display: block;
   margin: 2px auto;
   cursor: pointer;
@@ -84,4 +84,10 @@ html {
 
 .button_correct::before {
   content: "✔️";
+}
+.result__content {
+  align-items: center;
+  margin-top: 40%;
+  color: #e51a1a;
+  font-family: "Caveat-Bold";
 }

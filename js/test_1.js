@@ -1,4 +1,5 @@
 const headElem = document.getElementById("head");
+const resultElem = document.getElementById("result");
 const buttonsElem = document.getElementById("buttons");
 const pagesElem = document.getElementById("pages");
 
@@ -188,8 +189,9 @@ function Update() {
     Init();
   } else {
     buttonsElem.innerHTML = "";
-    headElem.innerHTML = quiz.results[quiz.result].text;
+    resultElem.innerHTML = quiz.results[quiz.result].text;
     pagesElem.innerHTML = "Очки: " + quiz.score;
+    resultElem.innerHTML = "facking";
   }
 }
 
