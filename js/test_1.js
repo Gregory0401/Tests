@@ -225,6 +225,4 @@ function Click(index) {
   } else {
     btns[index].className = "button button_correct";
   }
-
-  setTimeout(Update, 1000);
 }
