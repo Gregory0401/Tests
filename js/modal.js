@@ -16,4 +16,11 @@
     document.body.classList.toggle("backdrop");
     refs.modal.classList.toggle("is-hidden");
   }
+
+  function cleanCart() {
+    refs.modal.classList.toggle("is-hidden");
+    localStorage.removeItem("data");
+    const numberItemsCart = document.querySelector(".header_cart-number");
+    numberItemsCart.innerHTML = " ";
+  }
 })();
